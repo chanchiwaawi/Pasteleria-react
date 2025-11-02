@@ -223,19 +223,36 @@ function vaciarCarrito() {
 // Simula la compra del carrito
 function comprarCarrito() {
     if (productosEnCarrito.length > 0) {
+        const confirmar = confirm("¿Deseas confirmar la compra?");
+        if (!confirmar) return;
+
+        const nuevaBoleta = {
+            id: Date.now(),
+            fecha: new Date().toLocaleString(),
+            productos: productosEnCarrito,
+            total: productosEnCarrito.reduce((acc, p) => acc + p.precio * p.cantidad, 0)
+        };
+
+        let boletasGuardadas = JSON.parse(localStorage.getItem("boletasGuardadas")) || [];
+        boletasGuardadas.push(nuevaBoleta);
+        localStorage.setItem("boletasGuardadas", JSON.stringify(boletasGuardadas));
+
+        // Vaciar carrito tras compra
         productosEnCarrito = [];
         actualizarLocalStorage();
         
+
         // Mostrar mensaje de compra exitosa
         contenedorCarritoVacio.classList.add("disabled");
         contenedorCarritoProductos.classList.add("disabled");
         contenedorCarritoAcciones.classList.add("disabled");
         contenedorCarritoComprado.classList.remove("disabled");
-        
+
         actualizarNumeritoCarrito();
+    } else {
+        alert("El carrito está vacío");
     }
 }
-
 
 // =======================================
 // FUNCIONES DE UTILIDAD

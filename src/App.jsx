@@ -25,7 +25,6 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}></Route>
           <Route path='/productos' element={<Productos/>}></Route>
-          <Route path='/contacto' element={<Contacto/>}></Route>
           <Route path='/nosotros' element={<Nosotros/>}></Route>
           <Route path='/blogs' element={<Blogs/>}></Route>
           <Route path='/carrito' element={<Carrito/>}></Route>
@@ -33,6 +32,9 @@ function App() {
           <Route path='/admin' element={<Admin/>}></Route>
           <Route path='/boletas' element={<Boleta/>}></Route>
           <Route path='/usuarioperfiles' element={<UsuarioPerfiles/>}></Route>
+        </Routes>
+        <Routes>
+        <Route path='/contacto' element={<Contacto/>}></Route>
         </Routes>
         </main>
       </Router>
