@@ -60,9 +60,6 @@ function Navbar(){
             <nav>
                 <ul className="menu">
                     <li>
-                        <a href="/"> <button id="todos" className="boton-menu boton-categoria active"><i className="bi bi-caret-right-fill"></i>menu</button></a>
-                    </li>
-                    <li>
                         <a href="/productos"> <button id="todos" className="boton-menu boton-categoria"><i className="bi bi-caret-right-fill"></i> Productos </button></a>
                     </li>
                     <li>
@@ -85,6 +82,12 @@ function Navbar(){
                     </li>
                     <li>
                         <button id="noticias" className="boton-menu boton-categoria"><i className="bi bi-caret-right"></i><a href="/blogs">Noticias</a></button>
+                    </li>
+                    <li>
+                        <a href='/boletas'> <button id="boletas" className="boton-menu boton-categoria"><i className="bi bi-caret-right"></i> Boletas</button></a>
+                    </li>
+                    <li>
+                        <a href="/login"> <button id="login" className="boton-menu boton-categoria"><i className="bi bi-person-fill"></i> Login</button></a>
                     </li>
                     <li>
                         <a className="boton-menu boton-carrito" href="/carrito">

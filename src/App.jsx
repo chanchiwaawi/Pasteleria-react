@@ -22,20 +22,18 @@ function App() {
       <Router>
         <Navbar/>
         <main>
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/productos' element={<Productos/>}></Route>
-          <Route path='/nosotros' element={<Nosotros/>}></Route>
-          <Route path='/blogs' element={<Blogs/>}></Route>
-          <Route path='/carrito' element={<Carrito/>}></Route>
-          <Route path='/login' element={<Login/>}></Route>
-          <Route path='/admin' element={<Admin/>}></Route>
-          <Route path='/boletas' element={<Boleta/>}></Route>
-          <Route path='/usuarioperfiles' element={<UsuarioPerfiles/>}></Route>
-        </Routes>
-        <Routes>
-        <Route path='/contacto' element={<Contacto/>}></Route>
-        </Routes>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path='/productos' element={<Productos/>} />
+            <Route path='/nosotros' element={<Nosotros/>} />
+            <Route path='/blogs' element={<Blogs/>} />
+            <Route path='/contacto' element={<Contacto/>} />
+            <Route path='/carrito' element={<Carrito/>} />
+            <Route path='/login' element={<Login/>} />
+            <Route path='/admin' element={<Admin/>} />
+            <Route path='/boletas' element={<Boleta/>} />
+            <Route path='/usuarioperfiles' element={<UsuarioPerfiles/>} />
+          </Routes>
         </main>
       </Router>
       </div>

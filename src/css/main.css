@@ -231,6 +231,11 @@ main {
     gap: 1.5rem;
 }
 
+.contenedor-carrito p {
+    color: var(--crl-main-2);
+    font-weight: 500;
+}
+
 .carrito-productos {
     display: flex;
     flex-direction: column;
@@ -563,7 +568,6 @@ img {
     background: #f6f7fb;
     margin: 0;
     padding: 40px;
-    display: flex;
     justify-content: center;
     color: #000;
     }
